@@ -56,6 +56,7 @@ const chackCountCol = () => {
     appendCol.disabled = false;
   }
 };
+
 // eslint-disable-next-line no-shadow
 container.addEventListener('click', (event) => {
   const button = event.target.closest('.button');
