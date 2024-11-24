@@ -23,14 +23,14 @@ const appendColClick = () => {
   }
 };
 const removeRowClick = () => {
-  table.deleteRow(table.rows[0]);
+  table.deleteRow(0);
 };
 const removeColClick = () => {
   for (let i = 0; i < countRow; i++) {
-    table.rows[i].deleteCell(table.rows[0].cells[0]);
+    table.rows[i].deleteCell(0);
   }
 };
-const chackCountRow = () => {
+const checkCountRow = () => {
   if (countRow === 2) {
     removeRow.disabled = true;
   } else {
@@ -43,7 +43,7 @@ const chackCountRow = () => {
     appendRow.disabled = false;
   }
 };
-const chackCountCol = () => {
+const checkCountCol = () => {
   if (countCol === 2) {
     removeCol.disabled = true;
   } else {
@@ -81,7 +81,7 @@ container.addEventListener('click', (event) => {
     countRow = table.rows.length;
     countCol = table.rows[0].cells.length;
 
-    chackCountRow();
-    chackCountCol();
+    checkCountRow();
+    checkCountCol();
   }
 });
